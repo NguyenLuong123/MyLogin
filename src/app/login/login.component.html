@@ -1,0 +1,22 @@
+<body>
+<div class="login" *ngIf="isSucess == null">
+
+    <h1 class="text-center"><strong>Đăng nhập</strong></h1>
+    
+    <form>
+        <div class="form-group">
+            <label class="form-label">Tên tài khoản</label>
+            <input type = "text" name="username" [(ngModel)] = "username">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="password">Mật khẩu</label>
+            <input type="password" name="password" [(ngModel)] = "password">
+        </div>
+        <button class="btn btn-success" type="submit" (click)="Login()">Đăng nhập</button>
+    </form>
+</div>
+<div *ngIf = "isSucess == true;">
+    <h1>Hello World!!</h1>
+</div>
+
+
